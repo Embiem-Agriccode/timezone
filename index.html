@@ -19,8 +19,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0
 header{position:sticky;top:0;z-index:50;background:rgba(238,243,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:80px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em}
-.logo svg{width:54px;height:40px}.logo b{font-size:17px}
-.logo em{font-style:normal;color:var(--blue);font-weight:600;font-size:15px;border-left:2px solid var(--ink);padding-left:8px}
+.logo img{height:62px;width:auto;display:block}footer .logo img{height:96px}
 .hr{display:flex;gap:12px;align-items:center}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:9px;font-weight:500;font-size:17px;transition:.2s}
 .bp{background:var(--blue);color:#fff}.bp:hover{background:#1a37cc;transform:translateY(-1px)}
@@ -39,8 +38,8 @@ h1{font-size:clamp(44px,6.6vw,80px);letter-spacing:-.045em;line-height:1.02;marg
 .unit{background:#fff;border-radius:20px;padding:18px;box-shadow:0 20px 50px -20px rgba(20,40,120,.3);border:1px solid var(--line)}
 .uh{display:flex;justify-content:space-between;padding:4px 6px 14px;font-size:13px;color:var(--mut)}
 .uh b{color:var(--ink);font-size:16px;font-weight:500;display:flex;gap:8px;align-items:center}
-.stage{position:relative;height:360px;border-radius:14px;background:#06080f;overflow:hidden}
-.stage img{width:100%;height:100%;object-fit:cover;display:block}
+.stage{position:relative;height:360px;border-radius:14px;background:#fff;border:1px solid var(--line);overflow:hidden}
+.stage img{width:100%;height:100%;object-fit:contain;display:block;padding:10px 10px 44px}
 .tag{position:absolute;bottom:14px;padding:7px 12px;border-radius:8px;font-size:13px}
 .t1{left:14px;background:#eef1f8}.t2{right:14px;background:var(--blue);color:#fff}
 .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
@@ -59,9 +58,9 @@ h2{font-size:clamp(36px,4.8vw,58px);letter-spacing:-.04em;line-height:1.05;font-
 .sub{font-size:21px;color:var(--mut);max-width:700px;margin:14px 0 44px;line-height:1.7}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
 .pc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 34px -18px rgba(15,30,100,.45);display:flex;flex-direction:column}
-.pi{position:relative;height:340px;display:grid;place-items:center;background:#e9eef9;border-bottom:1px solid var(--line);overflow:hidden}
-.pi img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.pc:hover .pi img{transform:scale(1.04)}
+.pi{position:relative;height:340px;display:grid;place-items:center;background:#fff;border-bottom:1px solid var(--line);overflow:hidden}
+.pi img{width:100%;height:100%;object-fit:contain;padding:44px 14px 14px;transition:.4s;transform:scale(var(--z,1))}
+.pc:hover .pi img{transform:scale(calc(var(--z,1)*1.05))}
 .pi svg{height:80%}
 .bat{position:absolute;top:16px;left:16px;z-index:2;background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-size:14px;display:flex;gap:6px;align-items:center;color:var(--ink)}
 .bat .i{color:var(--blue)}
@@ -90,7 +89,7 @@ h2{font-size:clamp(36px,4.8vw,58px);letter-spacing:-.04em;line-height:1.05;font-
 .dark .sub{color:#a8adb9}
 .sf{border-top:1px solid #2a2b30;padding-top:22px;font-size:14px;color:#aab;letter-spacing:.1em;margin-bottom:24px}
 .sc{display:grid;grid-template-columns:38% 1fr;background:#161719;border:1px solid #2a2b30;border-radius:14px;overflow:hidden;margin-bottom:24px}
-.sci{min-height:300px;background:#22242a}.sci img{width:100%;height:100%;object-fit:cover;display:block}
+.sci{min-height:300px;background:#fff}.sci img{width:100%;height:100%;min-height:300px;object-fit:contain;display:block;padding:14px}
 .sci svg{height:240px;margin:30px auto;display:block}
 .scb{padding:34px;display:flex;flex-direction:column;gap:14px}
 .scb .r{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
@@ -136,7 +135,7 @@ footer ul{padding:0}footer li{list-style:none;margin-bottom:22px;color:var(--mut
 </head>
 <body>
 <header><div class="wrap hd">
-<a href="#top" class="logo"><svg viewBox="0 0 54 40"><path d="M2 5h32l-6 8H15l-3 4h17L6 36l9-15H2z" fill="#0b0d12"/><path d="M32 5h20L38 36H23l6-15h8z" fill="#2447f5"/></svg><b>TIME ZONE</b><em>GADGETS</em></a>
+<a href="#top" class="logo"><img src="./images/timezone_logo.png" alt="Time Zone Gadgets"></a>
 <div class="hr"><a class="btn bp wa" href="#"><i class="i" data-i="chat" data-s="22"></i><span>Order on WhatsApp</span></a><button class="burger" id="bg" aria-label="Menu"><i class="i" data-i="menu" data-s="26"></i></button></div>
 </div>
 <nav id="menu"><a href="#iphones">iPhones</a><a href="#showcase">Flagship Showcase</a><a href="#trade">Trade-In</a><a href="#contact">Contact</a></nav></header>
@@ -215,31 +214,31 @@ footer ul{padding:0}footer li{list-style:none;margin-bottom:22px;color:var(--mut
 
 <footer><div class="wrap">
 <div class="fg">
-<div><a href="#top" class="logo" style="margin-bottom:22px"><svg viewBox="0 0 54 40"><path d="M2 5h32l-6 8H15l-3 4h17L6 36l9-15H2z" fill="#0b0d12"/><path d="M32 5h20L38 36H23l6-15h8z" fill="#2447f5"/></svg><b>TIME ZONE</b><em>GADGETS</em></a><p style="color:var(--mut);font-size:19px;margin-bottom:26px">Your verified iPhone terminal at Fansamu Plaza, Farm Centre, Kano.</p><a class="btn bp wa" href="#"><i class="i" data-i="chat" data-s="20"></i>Chat on WhatsApp <i class="i" data-i="ext" data-s="16"></i></a></div>
+<div><a href="#top" class="logo" style="margin-bottom:22px"><img src="./images/timezone_logo.png" alt="Time Zone Gadgets"></a><p style="color:var(--mut);font-size:19px;margin-bottom:26px">Your verified iPhone terminal at Fansamu Plaza, Farm Centre, Kano.</p><a class="btn bp wa" href="#"><i class="i" data-i="chat" data-s="20"></i>Chat on WhatsApp <i class="i" data-i="ext" data-s="16"></i></a></div>
 <div><h4 class="mono">DIRECTORY</h4><ul><li><a href="#iphones">iPhones</a></li><li><a href="#trade">Trade-In</a></li><li><a href="#contact">Contact</a></li></ul></div>
 <div><h4 class="mono">KANO SHOWROOM</h4><div class="fl"><i class="i" data-i="pin" data-s="22"></i><span>No. 197 Fansamu Plaza (Upstairs), Farm Centre, Kano</span></div><div class="fl" style="color:var(--ink)"><i class="i" data-i="phone" data-s="22"></i><a href="https://wa.me/2348136978258">WhatsApp: 08136978258</a></div><div class="fl" style="color:var(--ink)"><i class="i" data-i="phone" data-s="22"></i><a href="https://wa.me/2348109187821">WhatsApp: 08109187821</a></div></div>
 </div>
 <div class="fb"><span>© <span id="yr"></span> Time Zone Gadgets. All rights reserved.</span><span class="mono">FARM CENTRE HARDWARE OUTLET</span></div>
-<p class="cr">Product photos via Wikimedia Commons (CC BY-SA). Prices and stock confirmed on WhatsApp.</p>
 </div></footer>
 
 <script>
 var WA="2348136978258";
-/* Photos come from Wikimedia Commons by file name. To use your own photo for any model, put a full URL or local path in its "f" field. */
+/* Put your photos in the "images" folder next to index.html. Each "f" is the file name inside that folder. */
+var IMGDIR="./images/";
 var P=[
-{id:"12pro",n:"iPhone 12 Pro",d:"Stainless steel band, triple camera system and LiDAR scanner.",s:["128GB","256GB","512GB"],b:85,f:"IPhone_12_Pro_-_3.jpg",pro:1,l:3,c:["#3b6a9a","#152a44"]},
-{id:"12promax",n:"iPhone 12 Pro Max",d:"Triple camera system with LiDAR scanner and stainless steel band.",s:["128GB","256GB","512GB"],b:86,f:"IPhone_12_Pro_Max_-_3.jpg",pro:1,l:3,c:["#3b6a9a","#152a44"]},
-{id:"13",n:"iPhone 13",d:"Cinematic mode with ultra-efficient A15 Bionic architecture.",s:["128GB","256GB","512GB"],b:88,f:"IPhone_13.jpg",pro:0,l:2,c:["#ff6a45","#b22e12"]},
-{id:"13pro",n:"iPhone 13 Pro",d:"120Hz ProMotion display and legendary all-day battery runtime.",s:["128GB","256GB","1TB"],b:87,f:"Apple_iPhone_13_Pro.jpg",pro:1,l:3,c:["#8fb4d9","#3b5f86"]},
-{id:"15promax",n:"iPhone 15 Pro Max",d:"Titanium flagship with A17 Pro and 5x telephoto zoom.",s:["256GB","512GB","1TB"],b:90,f:"IPhone_15_pro_max.jpg",pro:1,l:3,c:["#b8b3ab","#6a655d"]},
-{id:"16promax",n:"iPhone 16 Pro Max",d:"A18 Pro performance with 48MP Fusion camera and 4K 120 fps.",s:["256GB","512GB","1TB"],b:92,f:"Back_view_of_iPhone_16_Pro_Max_Natural_Titanium.jpg",pro:1,l:3,c:["#d8c9a8","#8c7b58"]}
+{id:"12pro",n:"iPhone 12 Pro",d:"Stainless steel band, triple camera system and LiDAR scanner.",s:["128GB","256GB","512GB"],b:85,f:"ipone_12_pro_max.jpg",pro:1,l:3,c:["#3b6a9a","#152a44"]},
+{id:"12promax",n:"iPhone 12 Pro Max",d:"Triple camera system with LiDAR scanner and stainless steel band.",s:["128GB","256GB","512GB"],b:86,f:"12_pro.jpg",pro:1,l:3,c:["#d8c9a8","#8c7b58"]},
+{id:"13",n:"iPhone 13",d:"Cinematic mode with ultra-efficient A15 Bionic architecture.",s:["128GB","256GB","512GB"],b:88,f:"13.jpg",pro:0,l:2,c:["#ff6a45","#b22e12"]},
+{id:"13pro",n:"iPhone 13 Pro",d:"120Hz ProMotion display and legendary all-day battery runtime.",s:["128GB","256GB","1TB"],b:87,f:"13_pro.webp",z:1.9,pro:1,l:3,c:["#8fb4d9","#3b5f86"]},
+{id:"16",n:"iPhone 16",d:"A18 chip, Camera Control button and a brighter, bolder display.",s:["128GB","256GB","512GB"],b:91,f:"16.jpg",pro:0,l:2,c:["#7f8cff","#3a44b8"]},
+{id:"16promax",n:"iPhone 16 Pro Max",d:"A18 Pro performance with 48MP Fusion camera and 4K 120 fps.",s:["256GB","512GB","1TB"],b:92,f:"16_pro_max.jpg",pro:1,l:3,c:["#d8c9a8","#8c7b58"]}
 ];
 var SHOW=[
-{n:"iPhone 15 Pro Max",d:"Titanium flagship with A17 Pro and 5x telephoto zoom.",t:"Grade A+ Import",f:"IPhone_15_pro_max.jpg",c:["#b8b3ab","#6a655d"]},
-{n:"iPhone 16 Pro Max",d:"A18 Pro performance with 48MP Fusion camera and 4K 120 fps.",t:"Grade A+ Import",f:"Back_view_of_iPhone_16_Pro_Max_Natural_Titanium.jpg",c:["#d8c9a8","#8c7b58"]},
-{n:"iPhone 17 Pro Max",d:"The ultimate flagship standard with breakthrough thermal endurance and pro sensors.",t:"Daily market rate",f:"IPhone_17,_Air,_17_Pro,_and_Pro_max.jpg",c:["#e6dcc3","#a8946a"]}
+{n:"iPhone 16 Pro Max",d:"A18 Pro performance with 48MP Fusion camera and 4K 120 fps.",t:"Grade A+ Import",f:"16_pro_max.jpg",c:["#d8c9a8","#8c7b58"]},
+{n:"iPhone 17 Pro Max",d:"The ultimate flagship standard with breakthrough thermal endurance and pro sensors.",t:"Daily market rate",f:"17pro_max.png",c:["#e6dcc3","#a8946a"]},
+{n:"iPhone 16",d:"A18 chip, Camera Control button and a brighter, bolder display.",t:"Grade A+ Import",f:"16.jpg",c:["#7f8cff","#3a44b8"]}
 ];
-var HERO="IPhone_17,_Air,_17_Pro,_and_Pro_max.jpg";
+var HERO="17pro_max.png";
 /* ===== icons ===== */
 var D={chat:'<path d="M4 4h16v12H9l-5 4z"/>',menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
 face:'<path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 10v1.5M15 10v1.5M9.5 15c1.4 1.3 3.6 1.3 5 0"/>',
@@ -253,18 +252,18 @@ spark:'<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l
 function ic(n,s){return '<i class="i">'+'<svg viewBox="0 0 24 24" width="'+s+'" height="'+s+'" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+D[n]+'</svg></i>'}
 function hy(){document.querySelectorAll("i[data-i]").forEach(function(e){e.innerHTML=ic(e.dataset.i,e.dataset.s||22).replace(/^<i class="i">|<\/i>$/g,"");e.removeAttribute("data-i")})}
 /* ===== images ===== */
-function im(f,w){return /^(https?:|\.|\/)/.test(f)?f:"https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(f)+"?width="+w}
+function im(f){return /^(https?:|\.|\/)/.test(f)?f:IMGDIR+f}
 function ph(c,l){var u="g"+Math.random().toString(36).slice(2,7);var cam=l==3?'<circle cx="34" cy="38" r="9" fill="#111" stroke="#666" stroke-width="2"/><circle cx="56" cy="38" r="9" fill="#111" stroke="#666" stroke-width="2"/><circle cx="45" cy="58" r="9" fill="#111" stroke="#666" stroke-width="2"/>':'<circle cx="34" cy="38" r="9" fill="#111" stroke="#666" stroke-width="2"/><circle cx="56" cy="52" r="9" fill="#111" stroke="#666" stroke-width="2"/>';
 return '<svg viewBox="0 0 120 250"><defs><linearGradient id="'+u+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient></defs><rect x="4" y="4" width="112" height="242" rx="24" fill="#2a2a2e"/><rect x="7" y="7" width="106" height="236" rx="22" fill="url(#'+u+')"/><rect x="14" y="14" width="56" height="62" rx="14" fill="#ffffff26" stroke="#ffffff55"/>'+cam+'</svg>'}
 function fb(el){el.insertAdjacentHTML("afterend",ph(el.dataset.c.split(","),+el.dataset.l));el.remove()}
-function pic(p){return '<img src="'+im(p.f,900)+'" alt="'+p.n+'" loading="lazy" referrerpolicy="no-referrer" data-c="'+p.c+'" data-l="'+(p.l||3)+'" onerror="fb(this)">'}
+function pic(p){return '<img src="'+im(p.f)+'" alt="'+p.n+'" loading="lazy"'+(p.z?' style="--z:'+p.z+'"':'')+' data-c="'+p.c+'" data-l="'+(p.l||3)+'" onerror="fb(this)">'}
 function wl(m){return "https://wa.me/"+WA+"?text="+encodeURIComponent(m)}
 function card(p){return '<article class="pc" data-id="'+p.id+'"><div class="pi"><span class="bat mono">'+ic("batt",16)+p.b+'%+ Battery Health</span>'+pic(p)+'</div><div class="pb"><div class="pt"><h3>'+p.n+'</h3><span class="ver">'+ic("checkc",16)+'Verified</span></div><p>'+p.d+'</p><div class="lbl mono">Storage Capacity</div><div class="st">'+p.s.map(function(s,i){return '<button class="'+(i?'':'on')+'" data-s="'+s+'">'+s+'</button>'}).join("")+'</div><div class="fid">Face ID Active / Verified</div><a class="btn bp ord" href="#" target="_blank" rel="noopener">'+ic("chat",20)+'Order on WhatsApp</a></div></article>'}
 /* ===== render ===== */
-var h=document.getElementById("hero");h.src=im(HERO,1200);h.onerror=function(){h.style.display="none"};
+var h=document.getElementById("hero");h.src=im(HERO);h.onerror=function(){h.style.display="none"};
 document.getElementById("feat").innerHTML=P.slice(0,4).map(card).join("");
 var all=document.getElementById("all");all.innerHTML=P.map(card).join("");
-document.getElementById("show").innerHTML=SHOW.map(function(s){return '<div class="sc"><div class="sci"><img src="'+im(s.f,1000)+'" alt="'+s.n+'" loading="lazy" referrerpolicy="no-referrer" data-c="'+s.c+'" data-l="3" onerror="fb(this)"></div><div class="scb"><div class="r"><h3>'+s.n+'</h3><span class="tg mono">'+s.t+'</span></div><p>'+s.d+'</p><div class="f"><span class="mono">Direct Terminal Dispatch</span><a class="btn bp" target="_blank" rel="noopener" href="'+wl("Hello Time Zone Gadgets, I want the "+s.n+". Please confirm price and availability.")+'">'+ic("chat",20)+'Order on WhatsApp</a></div></div></div>'}).join("");
+document.getElementById("show").innerHTML=SHOW.map(function(s){return '<div class="sc"><div class="sci"><img src="'+im(s.f)+'" alt="'+s.n+'" loading="lazy" data-c="'+s.c+'" data-l="3" onerror="fb(this)"></div><div class="scb"><div class="r"><h3>'+s.n+'</h3><span class="tg mono">'+s.t+'</span></div><p>'+s.d+'</p><div class="f"><span class="mono">Direct Terminal Dispatch</span><a class="btn bp" target="_blank" rel="noopener" href="'+wl("Hello Time Zone Gadgets, I want the "+s.n+". Please confirm price and availability.")+'">'+ic("chat",20)+'Order on WhatsApp</a></div></div></div>'}).join("");
 document.getElementById("yr").textContent=new Date().getFullYear();
 hy();
 /* ===== wiring ===== */
